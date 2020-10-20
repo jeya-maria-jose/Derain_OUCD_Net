@@ -1,7 +1,7 @@
 # Derain_OUCD_Net
 Official Pytorch Code for "Exploring Overcomplete Representations for Single Image Deraining using CNNs"
 
-IEEE Journal of Selected Topics in Signal Processing
+IEEE Journal of Selected Topics in Signal Processing (Under Review)
 
 [Paper]()
 
