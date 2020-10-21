@@ -52,23 +52,22 @@ cd Derain_OUCD_Net
 
 ### Choosing the dataset
 
-Mention the txt file of the dataset in lines 119-121 of train.py, for example
+Mention the txt file of the dataset in line 13 of train_data.py and val_data.py, for example
 ```
-    labeled_name = 'DDN_100_split1.txt'
-    unlabeled_name = 'real_input_split1.txt'
-    val_filename = 'SIRR_test.txt'
+   train_list = train_data_dir + train_filename + "rain800.txt"
+   val_list = val_data_dir + 'val_list_rain800.txt'
 ``` 
 ### Training Command 
 
 ```bash
-python train.py -net OUCD -category indoor -train_batch_size 2 -save_dir rain800_OUCD -num_epochs 200
+python train.py -net OUCD -category derain -train_batch_size 2 -save_dir rain800_OUCD -num_epochs 200
 ```
 ### Testing Command 
 
 Choose the model you want to load from the checkpoint. Change the epoch and bestp variables with the model you need to test. Then, run 
 
 ```bash
-python test.py -category derain -exp_name DDN_SIRR_withGP
+python test.py -category derain -exp_name OUCD
 
 ```
 
