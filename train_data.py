@@ -10,7 +10,7 @@ import pdb
 class TrainData(data.Dataset):
     def __init__(self, crop_size, train_data_dir,train_filename):
         super().__init__()
-        train_list = train_data_dir + train_filename #'trainlist.txt'
+        train_list = train_data_dir + train_filename #+'trainlist.txt'
         print(train_list)
         with open(train_list) as f:
             contents = f.readlines()

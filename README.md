@@ -1,7 +1,6 @@
 # Derain_OUCD_Net
 Official Pytorch Code for "Exploring Overcomplete Representations for Single Image Deraining using CNNs"
 
-IEEE Journal of Selected Topics in Signal Processing (Under Review)
 
 [Paper]()
 
@@ -28,9 +27,37 @@ git clone https://github.com/jeya-maria-jose/Derain_OUCD_Net
 cd Derain_OUCD_Net
 ```
 
+
+## Dataset structure
+
+1. Download the rain datasets and arrange the rainy images and clean images in the following order
+2. Save the image names into text file (dataset_filename.txt)
+
+```
+   .
+    ├── data 
+    |   ├── train # Training  
+    |   |   ├── derain        
+    |   |   |   ├── <dataset_name>   
+    |   |   |   |   ├── rain              # rain images 
+    |   |   |   |   └── norain            # clean images
+    |   |   |   └── dataset_filename.txt
+    |   └── test  # Testing
+    |   |   ├── derain         
+    |   |   |   ├── <dataset_name>          
+    |   |   |   |   ├── rain              # rain images 
+    |   |   |   |   └── norain            # clean images
+    |   |   |   └── dataset_filename.txt
+```
+
 ### Choosing the dataset
 
-
+Mention the txt file of the dataset in lines 119-121 of train.py, for example
+```
+    labeled_name = 'DDN_100_split1.txt'
+    unlabeled_name = 'real_input_split1.txt'
+    val_filename = 'SIRR_test.txt'
+``` 
 ### Training Command 
 
 ```bash
@@ -41,7 +68,8 @@ python train.py -net OUCD -category indoor -train_batch_size 2 -save_dir rain800
 Choose the model you want to load from the checkpoint. Change the epoch and bestp variables with the model you need to test. Then, run 
 
 ```bash
-python test.py
+python test.py -category derain -exp_name DDN_SIRR_withGP
+
 ```
 
 

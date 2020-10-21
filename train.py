@@ -82,16 +82,16 @@ with open(log_file, 'a') as f:
 
 # --- Set category-specific hyper-parameters  --- #
 num_epochs = args.num_epochs
-if category == 'indoor':
+if category == 'derain':
     
-    train_data_dir = './data/train/indoor/'
-    val_data_dir = './data/test/SOTS/indoor/'
-elif category == 'outdoor':
+    train_data_dir = './data/train/derain/'
+    val_data_dir = './data/test/SOTS/derain/'
+elif category == 'dehaze':
  
-    train_data_dir = './data/train/outdoor/'
-    val_data_dir = './data/test/SOTS/outdoor/'
+    train_data_dir = './data/train/dehaze/'
+    val_data_dir = './data/test/SOTS/dehaze/'
 else:
-    raise Exception('Wrong image category. Set it to indoor or outdoor for RESIDE dateset.')
+    raise Exception('Wrong image category. Set it to derain or dehaze category.')
 
 
 # --- Gpu device --- #

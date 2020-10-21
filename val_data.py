@@ -5,6 +5,7 @@ from torchvision.transforms import Compose, ToTensor, Normalize
 import numpy as np
 from random import randrange
 
+
 # --- Validation/test dataset --- #
 class ValData(data.Dataset):
     def __init__(self, val_data_dir):
