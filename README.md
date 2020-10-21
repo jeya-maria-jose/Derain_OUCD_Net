@@ -71,4 +71,4 @@ python test.py -category derain -exp_name OUCD
 
 ```
 
-
+Pretrained Models will be uploaded soon
