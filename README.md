@@ -3,7 +3,7 @@ Official Pytorch Code for "Exploring Overcomplete Representations for Single Ima
 
 
 
-[Paper]()
+[Paper](https://arxiv.org/pdf/2010.10661.pdf)
 
 ## Prerequisites
 - Python >= 3.6  
@@ -73,3 +73,15 @@ python test.py -category derain -exp_name OUCD
 ```
 
 Pretrained Models will be uploaded soon
+
+# Citation
+```
+@misc{yasarla2020exploring,
+      title={Exploring Overcomplete Representations for Single Image Deraining using CNNs}, 
+      author={Rajeev Yasarla and Jeya Maria Jose Valanarasu and Vishal M. Patel},
+      year={2020},
+      eprint={2010.10661},
+      archivePrefix={arXiv},
+      primaryClass={eess.IV}
+}
+```
